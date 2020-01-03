@@ -35,7 +35,7 @@ namespace OpenSecureJournal.Test
             var reallyLongString = "";
             var password = "my12characterpass";
 
-            for(var i = 0; i < 1000; i++)
+            for(var i = 0; i < 30000; i++)
             {
                 reallyLongString += "Lorem ipsum dolor sit amet";
             }
