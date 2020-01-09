@@ -1,4 +1,9 @@
 
 */bin/*
 */obj/*
-packages/*
+*/.vs/*
+OpenSecureJournal.WPF/_NCrunch_OpenSecureJournal.WPF/
+
+*.ncrunchsolution
+
+OpenSecureJournal.WPF/OpenSecureJournal.WPF.v3.ncrunchsolution.user

@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\OpenSecureJournal\OpenSecureJournal.csproj" />
+    <ProjectReference Include="..\OpenSecureJournal.WPF\OpenSecureJournal.WPF.csproj" />
   </ItemGroup>
 
 </Project>

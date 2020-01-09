@@ -1,4 +1,4 @@
-using OpenSecureJournal.Services;
+using OpenSecureJournal.WPF.Services;
 using System;
 using Xunit;
 
@@ -35,7 +35,7 @@ namespace OpenSecureJournal.Test
             var reallyLongString = "";
             var password = "my12characterpass";
 
-            for(var i = 0; i < 30000; i++)
+            for (var i = 0; i < 30000; i++)
             {
                 reallyLongString += "Lorem ipsum dolor sit amet";
             }
@@ -43,7 +43,22 @@ namespace OpenSecureJournal.Test
             var encryptedText = AESThenHMAC.SimpleEncryptWithPassword(reallyLongString, password);
             var decryptedText = AESThenHMAC.SimpleDecryptWithPassword(encryptedText, password);
 
-            Assert.NotEqual(reallyLongString, decryptedText);
+            Assert.Equal(reallyLongString, decryptedText);
+        }
+
+        [Fact]
+        public void SimpleEncryptWithPassword_CiphertextModified_CannotBeDecrypted()
+        {
+            var secret = "test";
+            var password = "my12characterpass";
+            var encryptedText = AESThenHMAC.SimpleEncryptWithPassword(secret, password);
+            var modifiedCharacterArray = encryptedText.ToCharArray();
+            modifiedCharacterArray[5] = 'a';
+            var modifiedText = new String(modifiedCharacterArray);
+            var decryptedText = AESThenHMAC.SimpleDecryptWithPassword(modifiedText, password);
+
+            Assert.NotEqual(secret, decryptedText);
+            Assert.Null(decryptedText);
         }
     }
 }
