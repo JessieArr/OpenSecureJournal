@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.757
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenSecureJournal.WPF", "OpenSecureJournal.WPF.csproj", "{D6153183-180D-42A8-8C85-8EB1EC411C1B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenSecureJournal.Test", "..\OpenSecureJournal.Test\OpenSecureJournal.Test.csproj", "{B69C4ABB-AACF-4B22-8A7C-9AE4A134CBD0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenSecureJournal", "..\OpenSecureJournal\OpenSecureJournal.csproj", "{D988EB5E-58CA-46C6-BE26-48EAD88C6746}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenSecureJournal.Test", "..\OpenSecureJournal.Test\OpenSecureJournal.Test.csproj", "{A9FADBEB-7B53-4A94-B571-21C9C57FC9AB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +19,14 @@ Global
 		{D6153183-180D-42A8-8C85-8EB1EC411C1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D6153183-180D-42A8-8C85-8EB1EC411C1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D6153183-180D-42A8-8C85-8EB1EC411C1B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B69C4ABB-AACF-4B22-8A7C-9AE4A134CBD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B69C4ABB-AACF-4B22-8A7C-9AE4A134CBD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B69C4ABB-AACF-4B22-8A7C-9AE4A134CBD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B69C4ABB-AACF-4B22-8A7C-9AE4A134CBD0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D988EB5E-58CA-46C6-BE26-48EAD88C6746}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D988EB5E-58CA-46C6-BE26-48EAD88C6746}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D988EB5E-58CA-46C6-BE26-48EAD88C6746}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D988EB5E-58CA-46C6-BE26-48EAD88C6746}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9FADBEB-7B53-4A94-B571-21C9C57FC9AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9FADBEB-7B53-4A94-B571-21C9C57FC9AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9FADBEB-7B53-4A94-B571-21C9C57FC9AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9FADBEB-7B53-4A94-B571-21C9C57FC9AB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

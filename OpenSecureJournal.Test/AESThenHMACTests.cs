@@ -1,4 +1,4 @@
-using OpenSecureJournal.WPF.Services;
+using OpenSecureJournal.Services;
 using System;
 using Xunit;
 
