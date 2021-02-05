@@ -5,6 +5,7 @@ using OpenSecureJournal.Views;
 using ReactiveUI;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -17,8 +18,8 @@ namespace OpenSecureJournal.ViewModels
         public Journal Journal { get; set; }
         public string Password { get; set; }
 
-        private List<DateTime> _EntryDates; 
-        public List<DateTime> EntryDates
+        private ObservableCollection<DateTime> _EntryDates;
+        public ObservableCollection<DateTime> EntryDates
         {
             get => _EntryDates;
             set => this.RaiseAndSetIfChanged(ref _EntryDates, value);
@@ -37,13 +38,22 @@ namespace OpenSecureJournal.ViewModels
             {
                 Content = "Entry will appear here."
             };
+            EntryDates = new ObservableCollection<DateTime>();
         }
 
         public async void NewEntry()
         {
-            EntryContent = new Label()
+            var vm = new JournalEntryEditorViewModel();
+            var newEntry = new JournalEntry()
             {
-                Content = "New!!"
+                Date = DateTime.Now,
+                Text = "Your text here."
+            };
+            EntryDates.Add(newEntry.Date);
+            vm.LoadJournalEntry(newEntry);
+            EntryContent = new JournalEntryEditor()
+            {
+                DataContext = vm
             };
         }
     }
