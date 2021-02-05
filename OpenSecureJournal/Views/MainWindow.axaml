@@ -16,6 +16,7 @@
     <DockPanel>
       <Menu DockPanel.Dock="Top">
         <MenuItem Header="_File">
+          <MenuItem Header="_Create Journal" Command="{Binding CreateJournal}"/>
           <MenuItem Header="_Open Journal" Command="{Binding OpenJournal}"/>
           <Separator/>
           <MenuItem Header="_Exit" Command="{Binding ExitCommand}"/>

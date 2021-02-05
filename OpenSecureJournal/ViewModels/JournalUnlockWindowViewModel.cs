@@ -23,11 +23,12 @@ namespace OpenSecureJournal.ViewModels
 
         public async void UnlockJournal()
         {
-            var fileContents = await File.ReadAllTextAsync(JournalPath);
-            var decryptedContents = AESThenHMAC.SimpleDecryptWithPassword(fileContents, Password);
+            var journal = await JournalFileService.OpenJournal(JournalPath, Password);
+            var vm = new JournalControlViewModel();
+            vm.Journal = journal;
             MainContentHelper.MainWindowViewModel.MainContent = new JournalControl()
             {
-                DataContext = new JournalControlViewModel()
+                DataContext = vm,
             };
             ParentWindow.Close();
         }

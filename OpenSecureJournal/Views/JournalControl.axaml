@@ -8,5 +8,12 @@
   <Design.DataContext>
     <vm:JournalControlViewModel/>
   </Design.DataContext>
-  Journal!
+  <StackPanel Orientation="Horizontal">
+    <StackPanel>
+      <Button Command="{Binding NewEntry}">New Entry</Button>
+      <TreeView Items="{Binding EntryDates}"></TreeView>
+    </StackPanel>
+    <ContentControl Content="{Binding EntryContent}">
+    </ContentControl>    
+  </StackPanel>
 </UserControl>

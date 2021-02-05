@@ -25,6 +25,17 @@ namespace OpenSecureJournal.ViewModels
             MainContent = new JournalPlaceholder();
         }
 
+        public async void CreateJournal()
+        {
+            var vm = new JournalCreateWindowViewModel();
+            var unlockWindow = new JournalCreateWindow()
+            {
+                DataContext = vm
+            };
+            vm.ParentWindow = unlockWindow;
+            unlockWindow.Show();
+        }
+
         public async void OpenJournal()
         {
             var dialog = new OpenFileDialog();

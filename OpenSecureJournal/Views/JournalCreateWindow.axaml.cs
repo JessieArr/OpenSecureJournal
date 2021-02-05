@@ -4,16 +4,19 @@ using Avalonia.Markup.Xaml;
 
 namespace OpenSecureJournal.Views
 {
-    public class JournalControl : UserControl
+    public class JournalCreateWindow : Window
     {
-        public JournalControl()
+        public JournalCreateWindow()
         {
             InitializeComponent();
+#if DEBUG
+            this.AttachDevTools();
+#endif
         }
 
         private void InitializeComponent()
         {
             AvaloniaXamlLoader.Load(this);
-        }        
+        }
     }
 }
